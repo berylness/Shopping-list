@@ -5,27 +5,21 @@ html {
   box-sizing: inherit;
 }
 
-
-/* Begin Custom Styles */
+/* Begin Font Styles */
 body {
 	font-family: 'Bitter', serif;
 }
-
-.content {
-    padding: 0 0.938rem;
-	margin: 0 auto;
-}
-/* End Custom Styles */
+/* End Font Styles */
 
 /* Begin Background Image Expressions */
 .introduction {
 	background-position: center bottom;
-    background-repeat-x: no-repeat;
-    background-repeat-y: no-repeat;
-    background-size: cover;
-    height: 45.0rem;
-    overflow: auto;
-    margin-bottom: 10px;
+  background-repeat-x: no-repeat;
+  background-repeat-y: no-repeat;
+  background-size: cover;
+  height: 45.0rem;
+  overflow: auto;
+  margin-bottom: 10px;
 }
 
 .introduction {
@@ -36,140 +30,126 @@ body {
 /* End Background Image Expressions */
 
 
-/* Begin Main Text Expressions */
+/* Begin Headline Text Expressions */
 .introduction h1,
 .introduction h3 {
-    color: black;
-    text-align: center;
-    font-weight: 550;
+  color: black;
+  text-align: center;
+  font-weight: 550;
 }
 
 .introduction h1 {
-    margin-top: 5.0rem;
-    margin-bottom: 1.0rem;
-    font-size: 4.0rem;
+  margin: 5.0rem 0 1.0rem 0;
+  font-size: 4.0rem;
 }
 
 .introduction h3 {
-    margin-top: 10px;
-    font-size: 25px;
+  margin-top: 1.60rem;
+  font-size: 1.50rem;
 }
-/* End Main Text Expressions */
+/* End Headline Text Expressions */
 
 
-/* Begin Search Box Expressions */
+/* Overall Oval Shape of Searchbox */
 #searchbox {
-    background-color: #eaf8fc;
-    background-image: linear-gradient(#fff, #d4e8ec);
-    border-radius: 35px;    
-    border-width: 1px;
-    border-style: solid;
-    border-color: #c4d9df;            
-    width: 480px;
-    height: 55px;
-    padding: 10px;
-    margin: 30px auto 50px;
-    overflow: hidden; 
+  background-color: #eaf8fc;
+  background-image: linear-gradient(#fff, #d4e8ec);
+  border-radius: 35px;    
+  border-width: 1px;
+  border-style: solid;
+  border-color: #c4d9df;            
+  width: 480px;
+  height: 55px;
+  padding: 10px;
+  margin: 30px auto 30px;
+  overflow: hidden; 
 }
 
-#search {
-    padding: 5px 9px;
-    height: 32px;
-    width: 350px;
-    border: 1px solid #a4c3ca;
-    font: normal 13px 'trebuchet MS', arial, helvetica;
-    background: #f1f1f1;
-    border-radius: 50px 3px 3px 50px;
-    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.25) inset, 0 1px 0 rgba(255, 255, 255, 1);            
+/* Text Entry Field Shape and Instructional Text */
+#NewItemTextbox {
+  padding: 5px 9px;
+  height: 32px;
+  width: 350px;
+  border: 1px solid #a4c3ca;
+  font: normal .90rem 'trebuchet MS', arial, helvetica;
+  background: #f1f1f1;
+  border-radius: 50px 3px 3px 50px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.25) inset, 0 1px 0 rgba(255, 255, 255, 1);            
 }
 
-#submit {       
-    background-color: ##9dceff;
-    background-image: linear-gradient(#9dceff);
-    border-radius: 3px 50px 50px 3px;    
-    border-width: 1px;
-    border-style: solid;
-    border-color: #0080ff;
-    box-shadow: 0 0 1px rgba(0, 0, 0, 0.3), 
-                0 1px 0 rgba(255, 255, 255, 0.3) inset;
-    height: 35px;
-    margin: 0 0 0 10px;
-    padding: 0;
-    width: 90px;
-    cursor: pointer;
-    font: bold 14px Arial, Helvetica;
-    color: black;  
-    text-shadow: 0 1px 0 rgba(255,255,255,0.5);
+/* Add Button */
+#AddButton {       
+  background-color: ##9dceff;
+  background-image: linear-gradient(#9dceff);
+  border-radius: 3px 50px 50px 3px;    
+  border-width: 1px;
+  border-style: solid;
+  border-color: #0080ff;
+  box-shadow: 0 0 1px rgba(0, 0, 0, 0.3), 
+              0 1px 0 rgba(255, 255, 255, 0.3) inset;
+  height: 35px;
+  margin: 0 0 0 5px;
+  padding: 0;
+  width: 90px;
+  cursor: pointer;
+  font: bold .90rem Arial, Helvetica;
+  color: black;  
+  text-shadow: 0 1px 0 rgba(255,255,255,0.5);
 }
-
-#submit:hover {       
-    background-color: #9dc6ff;
-    background-image: linear-gradient(#9dc6ff);
-}   
-
-#submit:active {       
-    background: #519aff;
-    outline: none;
-    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.5) inset;        
-}
-/* End Search Box Expressions */
-
-
 
 /* Begin List Expressions */
-
-.list-container {
-    position: center;
-    width: 260px;
-    margin-left: 325px;
+ul#list {
+  margin-top: 15px;
+  margin-left: 250px;
 }
 
-
-li {
-  color: gray;  
-  padding-left: 1.0em;
-  padding-top: .90em;
-  overflow: hidden;
-  font: normal 13px 'trebuchet MS', arial, helvetica;
-  width: 10em;
-  background: #d4e3e6;
-  outline-color: gray;    
-  outline-style: solid;
-  outline-width: 1px;
+/* The Red Delete button*/
+#list a {
+  float: right;
+  text-decoration: none;
+  color: red;
+  font-size: .90rem;
+  font-family: sans-serif;
+  font-weight: bold;
+  padding-right: 8px;
+  padding-top: 8px;
 }
 
-li.show {
-  height: 2.5em;
-  width: 20em;
-  margin: 8px 0;
-  padding-right: 7px
+/* The Checkbox*/
+#list input[type="checkbox"] {
+  margin: 3px 10px 3px 2px;
 }
 
-.fa {
-    color: black;
-    float: right;
+/* The Rectangle the New Item Populates Within*/
+#list li {
+  line-height: 2px;
+  border: 1px solid #838994;
+  background-color: #f1f1f1;
+  margin: 2px 0 2px 48px;
+  width: 340px;
+  height: 32px;
 }
 
+/* The New List Item's Text*/
+li.ui-state-default {
+  padding-left: 10px;
+  padding-top: 7px;
+  font-color: #838994;
+  list-style-type: none;
+}
 
+/* The Strikethrough on a deleted list item*/
+.completed {
+  text-decoration: line-through;
+}   
 /* End List Expressions */
-
 
 
 
 /* Begin Footer Expressions */
 .social .copy {
-    font-size: 1.0rem;
-    font-weight: 300;
-    color: #838994;
+  font-size: 1.0rem;
+  font-weight: 300;
+  color: #838994;
 }
-
-
-
-
-
-
-
-
-
-
 /* End Footer Expressions */
