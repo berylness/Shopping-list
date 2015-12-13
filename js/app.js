@@ -1,6 +1,13 @@
-$(document).ready(function() {
+$(document).ready(function(){
+
+    /* prevent page from reloading on button click */
+	$("#AddButton").click(function(event){
+       event.preventDefault();
+       
+
 	/* add item on button click */
 	$("#AddButton").click(addItem);
+
 
 	/* add item when Return key is pressed and cursor is in textbox */
 	$("#NewItemTextbox").keydown(function(event) {
@@ -9,6 +16,7 @@ $(document).ready(function() {
 			addItem();
 		}
 	});
+});
 
 	/* remove item from list */
 	$("#list").on("click", "a", function() {
@@ -20,7 +28,7 @@ $(document).ready(function() {
 		}
 	});
 
-	/* strikethrough text value if checkbox ticked */
+	/* strikethrough text if checkbox ticked */
 	$("#list").on("change", "input:checkbox",function () {
 		var item = $(this).closest("li").find("span");
 		if($(this).is(":checked")) {
@@ -29,9 +37,8 @@ $(document).ready(function() {
 		else
 			item.removeClass("completed"); 
 	});
-});
+	});
 
-	/* Add value entered in textbox to the list */
 function addItem() {
 	var newItem = $("#NewItemTextbox").val();
 	if(newItem.trim().length === 0) {
@@ -50,3 +57,4 @@ function createListItem(newItem) {
 	listItem += "<a href='#'>X</a></li>";
 	return listItem; 
 }
+

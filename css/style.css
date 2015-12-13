@@ -77,10 +77,9 @@ body {
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.25) inset, 0 1px 0 rgba(255, 255, 255, 1);            
 }
 
-/* Add Button */
+/* The "Add" Button */
 #AddButton {       
-  background-color: ##9dceff;
-  background-image: linear-gradient(#9dceff);
+  background-color: #a4c3ca;
   border-radius: 3px 50px 50px 3px;    
   border-width: 1px;
   border-style: solid;
@@ -103,7 +102,7 @@ ul#list {
   margin-left: 250px;
 }
 
-/* The Red Delete button*/
+/* The Red Delete Button */
 #list a {
   float: right;
   text-decoration: none;
@@ -115,12 +114,12 @@ ul#list {
   padding-top: 8px;
 }
 
-/* The Checkbox*/
+/* The Checkbox */
 #list input[type="checkbox"] {
   margin: 3px 10px 3px 2px;
 }
 
-/* The Rectangle the New Item Populates Within*/
+/* The Rectangle the New Item Populates Within */
 #list li {
   line-height: 2px;
   border: 1px solid #838994;
@@ -130,7 +129,7 @@ ul#list {
   height: 32px;
 }
 
-/* The New List Item's Text*/
+/* The New List Item's Text */
 li.ui-state-default {
   padding-left: 10px;
   padding-top: 7px;
@@ -138,7 +137,7 @@ li.ui-state-default {
   list-style-type: none;
 }
 
-/* The Strikethrough on a deleted list item*/
+/* The Strikethrough on a Deleted List Item */
 .completed {
   text-decoration: line-through;
 }   
