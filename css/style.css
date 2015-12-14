@@ -98,8 +98,9 @@ body {
 
 /* Begin List Expressions */
 ul#list {
-  margin-top: 15px;
-  margin-left: 250px;
+  width: 340px;
+  padding-left: 0px;
+  margin: 15px auto 30px;
 }
 
 /* The Red Delete Button */
@@ -124,7 +125,7 @@ ul#list {
   line-height: 2px;
   border: 1px solid #838994;
   background-color: #f1f1f1;
-  margin: 2px 0 2px 48px;
+  margin: 2px 0 2px 0px;
   width: 340px;
   height: 32px;
 }

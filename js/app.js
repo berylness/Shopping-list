@@ -1,24 +1,27 @@
 $(document).ready(function(){
 
-    /* prevent page from reloading on button click */
+    /* prevent page from reloading on "Add" button click */
 	$("#AddButton").click(function(event){
        event.preventDefault();
-       
+       addItem();
+	});
 
-	/* add item on button click */
-	$("#AddButton").click(addItem);
-
-
-	/* add item when Return key is pressed and cursor is in textbox */
+	/* add item to the list when "Add" button is pressed and cursor is in textbox */
 	$("#NewItemTextbox").keydown(function(event) {
 		var keycode = event.keyCode ? event.keyCode : event.which;
 		if(keycode == 13){
 			addItem();
 		}
 	});
-});
 
-	/* remove item from list */
+	/* Makes list items vertically sortable */
+  	$(function() {
+   	 	$( "#list" ).sortable();
+    	$( "#list" ).disableSelection();
+  	});
+
+
+	/* removes item from list */
 	$("#list").on("click", "a", function() {
 		var listItem = $(this).closest("li");
 		var itemName = listItem.find("span").text();
@@ -28,7 +31,7 @@ $(document).ready(function(){
 		}
 	});
 
-	/* strikethrough text if checkbox ticked */
+	/* applies strikethrough to item text if checkbox ticked */
 	$("#list").on("change", "input:checkbox",function () {
 		var item = $(this).closest("li").find("span");
 		if($(this).is(":checked")) {
@@ -37,24 +40,24 @@ $(document).ready(function(){
 		else
 			item.removeClass("completed"); 
 	});
-	});
 
-function addItem() {
-	var newItem = $("#NewItemTextbox").val();
-	if(newItem.trim().length === 0) {
+	/* adds new item to the bottom of the list */
+	function addItem() {
+		var newItem = $("#NewItemTextbox").val();
+		if(newItem.trim().length === 0) {
 		;
         return;
 	}
 
-	var listItem = createListItem(newItem);
-	$("#list").append(listItem);
-	$("#NewItemTextbox").val("");
-}
+		var listItem = createListItem(newItem);
+		$("#list").append(listItem);
+		$("#NewItemTextbox").val("");
+	}
 
-function createListItem(newItem) {
-	var listItem = "<li class='ui-state-default'><input type='checkbox'>"; 
-	listItem += "<span>" + newItem + "</span>";
-	listItem += "<a href='#'>X</a></li>";
-	return listItem; 
-}
-
+	function createListItem(newItem) {
+		var listItem = "<li class='ui-state-default'><input type='checkbox'>"; 
+		listItem += "<span>" + newItem + "</span>";
+		listItem += "<a href='#'>X</a></li>";
+		return listItem; 
+	}
+});
